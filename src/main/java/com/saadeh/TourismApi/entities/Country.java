@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name = "country")
+@Table(name = "tb_country")
 public class Country {
 
     @Id
@@ -18,15 +18,15 @@ public class Country {
 
     @ManyToOne
     @JoinColumn(name = "continent_id")
-    private Continent continent;
+    private Continent countryContinent;
 
     public Country() {
     }
 
-    public Country(Long id, String name, Continent continent, Language language) {
+    public Country(Long id, String name, Continent countryContinent, Language language) {
         this.id = id;
         this.name = name;
-        this.continent = continent;
+        this.countryContinent = countryContinent;
         this.language = language;
     }
 
@@ -47,11 +47,11 @@ public class Country {
     }
 
     public Continent getContinent() {
-        return continent;
+        return countryContinent;
     }
 
-    public void setContinent(Continent continent) {
-        this.continent = continent;
+    public void setContinent(Continent countryContinent) {
+        this.countryContinent = countryContinent;
     }
 
     public Language getLanguage() {

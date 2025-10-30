@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Objects;
 
 @Entity
-@Table(name = "continent")
+@Table(name = "tb_continent")
 public class Continent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +17,7 @@ public class Continent {
 
     private Language language;
 
-    @OneToMany(mappedBy = "continent")
+    @OneToMany(mappedBy = "countryContinent")
     private List<Country> countries = new ArrayList<>();
 
     public Continent(){}

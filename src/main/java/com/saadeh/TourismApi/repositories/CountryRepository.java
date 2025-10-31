@@ -15,7 +15,7 @@ public interface CountryRepository extends JpaRepository<Country, Long> {
             FROM Country obj
             JOIN FETCH obj.countryContinent
             WHERE LOWER(obj.name) like LOWER(CONCAT('%',:countryName,'%'))
-            AND obj.countryContinent.id = :continent
+            AND (obj.countryContinent.id = 0 OR obj.countryContinent.id = :continent)
             """)
     Page<Country> searchAllPaged(String countryName, Long continent, Pageable pageable);
 }

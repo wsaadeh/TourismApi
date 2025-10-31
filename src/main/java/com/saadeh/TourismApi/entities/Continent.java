@@ -17,8 +17,8 @@ public class Continent {
 
     private Language language;
 
-    @OneToMany(mappedBy = "countryContinent")
-    private List<Country> countries = new ArrayList<>();
+//    @OneToMany(mappedBy = "countryContinent")
+//    private List<Country> countries = new ArrayList<>();
 
     public Continent(){}
 
@@ -52,9 +52,9 @@ public class Continent {
         this.language = language;
     }
 
-    public List<Country> getCountries() {
-        return countries;
-    }
+//    public List<Country> getCountries() {
+//        return countries;
+//    }
 
     @Override
     public boolean equals(Object o) {

@@ -1,7 +1,10 @@
 package com.saadeh.TourismApi.services;
 
 import com.saadeh.TourismApi.dto.CountryDto;
+import com.saadeh.TourismApi.dto.CountryMinDto;
+import com.saadeh.TourismApi.entities.Continent;
 import com.saadeh.TourismApi.entities.Country;
+import com.saadeh.TourismApi.repositories.ContinentRepository;
 import com.saadeh.TourismApi.repositories.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -15,10 +18,12 @@ public class CountryService {
     @Autowired
     CountryRepository repository;
 
+    @Autowired
+    ContinentRepository continentRepository;
+
     @Transactional(readOnly = true)
     public Page<CountryDto> searchAllPaged(String countryName, Long continentID, Pageable pageable ){
-        Page<Country> result = repository.searchAllPaged(countryName,pageable);
-        //Page<Country> result = repository.findAll(pageable);
+        Page<Country> result = repository.searchAllPaged(countryName,continentID,pageable);
         return result.map(x->new CountryDto(x));
     }
 

@@ -1,11 +1,13 @@
 package com.saadeh.TourismApi.entities;
 
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
 
 import java.util.Objects;
 
 @Entity
 @Table(name = "tb_country")
+@NoArgsConstructor
 public class Country {
 
     @Id
@@ -17,11 +19,8 @@ public class Country {
     private Language language;
 
     @ManyToOne
-    @JoinColumn(name = "continent_id")
+    @JoinColumn(name = "continent_id", nullable = false)
     private Continent countryContinent;
-
-    public Country() {
-    }
 
     public Country(Long id, String name, Continent countryContinent, Language language) {
         this.id = id;

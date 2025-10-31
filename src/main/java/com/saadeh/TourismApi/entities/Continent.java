@@ -17,8 +17,8 @@ public class Continent {
 
     private Language language;
 
-//    @OneToMany(mappedBy = "countryContinent")
-//    private List<Country> countries = new ArrayList<>();
+    @OneToMany(mappedBy = "countryContinent", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Country> countries = new ArrayList<>();
 
     public Continent(){}
 
@@ -51,10 +51,6 @@ public class Continent {
     public void setLanguage(Language language) {
         this.language = language;
     }
-
-//    public List<Country> getCountries() {
-//        return countries;
-//    }
 
     @Override
     public boolean equals(Object o) {

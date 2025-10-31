@@ -1,6 +1,7 @@
 package com.saadeh.TourismApi.controllers;
 
 import com.saadeh.TourismApi.dto.CountryDto;
+import com.saadeh.TourismApi.dto.CountryMinDto;
 import com.saadeh.TourismApi.services.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -25,4 +26,6 @@ public class CountryController {
         Page<CountryDto> dto = service.searchAllPaged(countryName,continentId,pageable);
         return ResponseEntity.ok().body(dto);
     }
+
+    
 }

@@ -21,7 +21,7 @@ public class CountryController {
 
     @GetMapping
     public ResponseEntity<Page<CountryDto>> findAll(@RequestParam(name = "name", defaultValue = "") String countryName,
-                                                   @RequestParam(name = "continent", defaultValue = "0") Long continentId,
+                                                   @RequestParam(name = "continent", required = false) Long continentId,
                                                    Pageable pageable){
         Page<CountryDto> dto = service.searchAllPaged(countryName,continentId,pageable);
         return ResponseEntity.ok().body(dto);

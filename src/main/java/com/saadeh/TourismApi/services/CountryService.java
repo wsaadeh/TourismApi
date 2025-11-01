@@ -27,7 +27,7 @@ public class CountryService {
 
     @Transactional(readOnly = true)
     public Page<CountryDto> searchAllPaged(String countryName, Long continentID, Pageable pageable ){
-        Page<Country> result = repository.searchAllPaged(countryName,continentID,pageable);
+        Page<Country> result = repository.searchAllPagedNative(countryName,continentID,pageable);
         return result.map(x->new CountryDto(x));
     }
 

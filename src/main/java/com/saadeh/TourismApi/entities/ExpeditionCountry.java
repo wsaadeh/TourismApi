@@ -1,0 +1,29 @@
+package com.saadeh.TourismApi.entities;
+
+import jakarta.persistence.EmbeddedId;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "tb_expedition_country")
+public class ExpeditionCountry {
+
+    @EmbeddedId
+    private ExpeditionCountryPK id = new ExpeditionCountryPK();
+
+    private boolean icon_elephant;
+    private boolean icon_canoe;
+    private boolean icon_beach;
+    private boolean icon_jeep;
+    private boolean icon_jeep2;
+    private boolean icon_mountain;
+    private boolean icon_boat;
+    private boolean icon_train;
+    private boolean icon_trekking;
+    private boolean icon_scuba;
+    private boolean icon_bike;
+    private boolean icon_bus;
+    //According to choice a-group,b-premium,c-excellence and blank(no choice made)
+    private String icon_selo;
+
+}

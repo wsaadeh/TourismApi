@@ -133,3 +133,6 @@ INSERT INTO tb_country (name,language,continent_id) VALUES ('Filipinas',0,1);
 INSERT INTO tb_country (name,language,continent_id) VALUES ('I. Canárias',0,2);
 INSERT INTO tb_country (name,language,continent_id) VALUES ('I. Madeiras',0,2);
 INSERT INTO tb_country (name,language,continent_id) VALUES ('Arábia Saudita',0,3);
+
+INSERT INTO TB_EXPEDITION (title,photo,link_h,intro_text,country_id,title_extra,show_country,publish,link_on_off,im_w,im_h,hide_date_operator,hide_date,duration,date,creation_daste,conditions)
+values()

@@ -24,6 +24,6 @@ public class ExpeditionCountry {
     private boolean icon_bike;
     private boolean icon_bus;
     //According to choice a-group,b-premium,c-excellence and blank(no choice made)
-    private String icon_selo;
+    private Selo icon_selo;
 
 }

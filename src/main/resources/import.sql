@@ -134,5 +134,8 @@ INSERT INTO tb_country (name,language,continent_id) VALUES ('I. Canárias',0,2);
 INSERT INTO tb_country (name,language,continent_id) VALUES ('I. Madeiras',0,2);
 INSERT INTO tb_country (name,language,continent_id) VALUES ('Arábia Saudita',0,3);
 
-INSERT INTO TB_EXPEDITION (title,photo,link_h,intro_text,country_id,title_extra,show_country,publish,link_on_off,im_w,im_h,hide_date_operator,hide_date,duration,date,creation_daste,conditions)
-values()
+INSERT INTO tb_expedition (title,photo,link_h,intro_text,country_id,title_extra,show_country,publish,link_on_off,im_w,im_h,hide_date_operator,hide_date,duration,date,creation_date,conditions) VALUES ('Nuno Alves prog 1','Botswana-sum-site.jpg', 0,'<br><b>BOTSWANA</b><br><br>Quando presa e predador bebem água lado a lado, há algo de diferente no ar. Talvez seja porque, num capricho da natureza, todo o delta de um rio desaparece em meio ao nada. Talvez seja apenas sede.',30,1,1,0,0,250,243,0,0,18,'2025-12-01','2025-11-10',0);
+
+INSERT INTO tb_expedition_country (expedition_id,country_id,icon_elephant,icon_canoe,icon_beach,icon_jeep,icon_jeep2,icon_mountain,icon_boat,icon_train,icon_trekking,icon_scuba,icon_bike,icon_bus,icon_selo) VALUES (1,30,1,1,1,1,1,1,1,1,1,1,1,1,1);
+INSERT INTO tb_expedition_country (expedition_id,country_id,icon_elephant,icon_canoe,icon_beach,icon_jeep,icon_jeep2,icon_mountain,icon_boat,icon_train,icon_trekking,icon_scuba,icon_bike,icon_bus,icon_selo) VALUES (1,31,1,1,1,1,1,1,1,1,1,1,1,1,1);
+INSERT INTO tb_expedition_country (expedition_id,country_id,icon_elephant,icon_canoe,icon_beach,icon_jeep,icon_jeep2,icon_mountain,icon_boat,icon_train,icon_trekking,icon_scuba,icon_bike,icon_bus,icon_selo) VALUES (1,84,1,1,1,1,1,1,1,1,1,1,1,1,1);

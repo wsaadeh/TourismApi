@@ -16,7 +16,7 @@ import java.time.LocalDate;
 @Entity(name = "tb_expedition")
 public class Expedition {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long country_id;
     private String title;

@@ -23,7 +23,7 @@ public class ExpeditionCountry {
     private boolean icon_scuba;
     private boolean icon_bike;
     private boolean icon_bus;
-    //According to choice a-group,b-premium,c-excellence and blank(no choice made)
+    //According to choice 0-blank(no choice made),1-group,2-premium,3-excellence
     private Selo icon_selo;
 
 }

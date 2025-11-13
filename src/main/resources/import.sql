@@ -179,3 +179,27 @@ insert into tb_country_attributes (country_id,attribute_id,description) values (
 insert into tb_country_attributes (country_id,attribute_id,description) values (30,'LANGUAGE','<br>Botswana. Inglês. Não há outro jeito. Um inglês rudimentar é mais do que suficiente para você se virar na viagem. Note que palavras tais como elephant, lion, leopard, giraffe, hippopotamus, crocodile, zebra e buffalo não nos são exatamente estranhas. ' );
 insert into tb_country_attributes (country_id,attribute_id,description) values (31,'LANGUAGE','<br>Zimbabwe. Inglês. Não há outro jeito. Um inglês rudimentar é mais do que suficiente para você se virar na viagem. Note que palavras tais como elephant, lion, leopard, giraffe, hippopotamus, crocodile, zebra e buffalo não nos são exatamente estranhas. ' );
 insert into tb_country_attributes (country_id,attribute_id,description) values (84,'LANGUAGE','<br>Moçambique. Inglês. Não há outro jeito. Um inglês rudimentar é mais do que suficiente para você se virar na viagem. Note que palavras tais como elephant, lion, leopard, giraffe, hippopotamus, crocodile, zebra e buffalo não nos são exatamente estranhas. ' );
+
+--Botswana event
+INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (30,'ACAMPAMENTO 3 / JOHANESBURGO','Safari pela manhã. À tarde, traslado ao aeroporto de Maun e embarque para Johanesburgo, com conexão em Gabarone. Recepção no aeroporto de Johanesburgo e traslado ao hotel.',0,0);
+INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (30,'LA DIGUE / PRASLIN / MAHE','Manhã livre. À tarde, traslado ao cais e embarque para a curta travessia marítima para Praslin. Recepção no cais, traslado ao aeroporto e embarque para Mahe. Recepção e traslado ao hotel. ',0,0);
+INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (30,'HWANGE / VICTORIA FALLS / CHOBE','Traslado ao aeroporto e embarque para Victoria Falls. Chegada e traslado para Chobe. Chegada e acomodação.  ',0,0);
+--Zimbabwe event
+INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (31,'JOHANESBURGO / VICTORIA FALLS','Pela manhã traslado ao aeroporto (traslado fornecido pelo próprio hotel) e assistência ao embarque para Victoria Falls. Ao final da tarde, um cruzeiro pelo rio Zambezi, acima das cataratas, num clássico crepúsculo africano, seguido de um show de dança tribal. ',0,0);
+INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (31,'VICTORIA FALLS','Dia livre (ver opcionais).<br /><br /><b>OPCIONAIS EM VICT&Oacute;RIA FALLS:</b>"V&ocirc;o dos Anjos"- um v&ocirc;o emocionante de helicoptero&nbsp;sobre as cataratas, rafting no rio Zambezi considerado um dos melhores do mundo, come&ccedil;ando ao p&eacute; das cataratas ou talvez uma visita ao parque dos leoes (aonde ter&aacute; a incr&iacute;vel&nbsp;oportunidade de tocar e interagir com esses felinos).&nbsp;&nbsp;As atividades s&atilde;o oferecidas em car&aacute;ter opcional devido &agrave; peculiaridade e ousadia de suas naturezas. ',0,0);
+INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (31,'HWANGE','Saída matutina para safari em jipe aberto. À tarde, saída para safári a pé, com "rangers" armados, por segurança. Numa verdadeira experiência africana, sinta o pulsar da savana através das solas das suas botas. ',0,0);
+--Moçambique event
+INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (84,'JOHANESBURGO / MAPUTO','Manh&atilde; livre. No in&iacute;cio da tarde, shuttle service (do pr&oacute;prio hotel) para o aeroporto e embarque para Maputo. Chegada, recep&ccedil;&atilde;o e traslado ao hotel.',0,0);
+INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (84,'MAPUTO','Pela manh&atilde;, sa&iacute;da para um citytour pela cidade. Tarde livre.&nbsp;',0,0);
+INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (84,'ILHAS QUIRIMBAS','Dia livre.',0,0);
+
+--insert events to expedition
+INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,1)
+INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,2)
+INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,3)
+INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,4)
+INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,5)
+INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,6)
+INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,7)
+INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,8)
+INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,9)

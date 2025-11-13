@@ -3,7 +3,9 @@ package com.saadeh.TourismApi.entities;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_country")
@@ -21,6 +23,9 @@ public class Country {
     @ManyToOne
     @JoinColumn(name = "continent_id", nullable = false)
     private Continent countryContinent;
+
+    @OneToMany(mappedBy = "country")
+    private Set<Event> events = new HashSet<>();
 
     public Country(Long id, String name, Continent countryContinent, Language language) {
         this.id = id;

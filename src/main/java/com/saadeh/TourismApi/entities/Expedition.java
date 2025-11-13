@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -35,4 +37,11 @@ public class Expedition {
     private String link_h;
     private boolean link_on_off;
     private boolean hide_date_operator;
+
+    @ManyToMany
+    @JoinTable(name = "tb_expedition_event",
+    joinColumns = @JoinColumn(name = "expedition_id"),
+    inverseJoinColumns = @JoinColumn(name = "event_id"))
+    private Set<Event> events = new HashSet<>();
+
 }

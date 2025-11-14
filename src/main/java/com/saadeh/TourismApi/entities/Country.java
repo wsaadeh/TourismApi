@@ -27,6 +27,9 @@ public class Country {
     @OneToMany(mappedBy = "country")
     private Set<Event> events = new HashSet<>();
 
+    @OneToMany(mappedBy = "country")
+    private Set<Hotels> hotels = new HashSet<>();
+
     public Country(Long id, String name, Continent countryContinent, Language language) {
         this.id = id;
         this.name = name;

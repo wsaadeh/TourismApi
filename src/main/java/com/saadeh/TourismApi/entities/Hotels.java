@@ -20,7 +20,7 @@ public class Hotels {
     private Long id;
     private String name;
     private int mealPlan;
-    private int apartment_type;
+    private int apartmentType;
     private int category;
     private boolean joker;
     private boolean ok;
@@ -31,7 +31,7 @@ public class Hotels {
     private String fax;
     private String email;
     private String website;
-    private String cidade;
+    private String city;
     private String photo1;
     private String photo2;
     private String photo3;
@@ -39,6 +39,7 @@ public class Hotels {
     @JoinColumn(name = "country_id")
     private Country country;
 
-    @OneToMany(mappedBy = "hotels")
-    private Set<ScheduleHotels> scheduleHotels = new HashSet<>();
+    @ManyToMany(mappedBy = "hotels")
+    Set<Expedition> expeditions = new HashSet<>();
+
 }

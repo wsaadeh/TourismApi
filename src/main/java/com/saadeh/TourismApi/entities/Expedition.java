@@ -1,10 +1,7 @@
 package com.saadeh.TourismApi.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.HashSet;
@@ -16,6 +13,7 @@ import java.util.Set;
 @Setter
 @Table
 @Entity(name = "tb_expedition")
+@EqualsAndHashCode
 public class Expedition {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,10 +36,27 @@ public class Expedition {
     private boolean link_on_off;
     private boolean hide_date_operator;
 
+//    private boolean hotelPublish;
+//    private LocalDate hotelDay1;
+//    private boolean hotelDateHide;
+//    private boolean hotelCatHide;
+//    private boolean hotelAddressHide;
+//    private boolean hotelTelHide;
+//    private boolean hotelEmailHide;
+//    private boolean hotelWebHide;
+//    private boolean hotelPhotoHide;
+//    private boolean hotelColHideDetails;
+
     @ManyToMany
     @JoinTable(name = "tb_expedition_event",
     joinColumns = @JoinColumn(name = "expedition_id"),
     inverseJoinColumns = @JoinColumn(name = "event_id"))
     private Set<Event> events = new HashSet<>();
+
+    @ManyToMany
+    @JoinTable(name = "tb_expedition_hotel",
+            joinColumns = @JoinColumn(name = "expedition_id"),
+            inverseJoinColumns = @JoinColumn(name = "hotel_id"))
+    private Set<Hotels> hotels = new HashSet<>();
 
 }

@@ -36,27 +36,29 @@ public class Expedition {
     private boolean link_on_off;
     private boolean hide_date_operator;
 
-//    private boolean hotelPublish;
-//    private LocalDate hotelDay1;
-//    private boolean hotelDateHide;
-//    private boolean hotelCatHide;
-//    private boolean hotelAddressHide;
-//    private boolean hotelTelHide;
-//    private boolean hotelEmailHide;
-//    private boolean hotelWebHide;
-//    private boolean hotelPhotoHide;
-//    private boolean hotelColHideDetails;
+    private boolean hotelPublish;
+    private LocalDate hotelDay1;
+    private boolean hotelDateHide;
+    private boolean hotelCatHide;
+    private boolean hotelAddressHide;
+    private boolean hotelTelHide;
+    private boolean hotelEmailHide;
+    private boolean hotelWebHide;
+    private boolean hotelPhotoHide;
+    private boolean hotelColHideDetails;
 
     @ManyToMany
     @JoinTable(name = "tb_expedition_event",
     joinColumns = @JoinColumn(name = "expedition_id"),
     inverseJoinColumns = @JoinColumn(name = "event_id"))
+    @OrderColumn(name = "event_order")
     private Set<Event> events = new HashSet<>();
 
     @ManyToMany
     @JoinTable(name = "tb_expedition_hotel",
             joinColumns = @JoinColumn(name = "expedition_id"),
             inverseJoinColumns = @JoinColumn(name = "hotel_id"))
+    @OrderColumn(name = "hotel_order")
     private Set<Hotels> hotels = new HashSet<>();
 
 }

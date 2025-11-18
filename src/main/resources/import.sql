@@ -194,15 +194,15 @@ INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (84,'MAPUTO'
 INSERT INTO tb_event (country_id,title,description,joker,ok) VALUES (84,'ILHAS QUIRIMBAS','Dia livre.',0,0);
 
 --insert events to expedition
-INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,1)
-INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,2)
-INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,3)
-INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,4)
-INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,5)
-INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,6)
-INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,7)
-INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,8)
-INSERT INTO tb_expedition_event (expedition_id,event_id) VALUES (1,9)
+INSERT INTO tb_expedition_event (expedition_id,event_id,event_order) VALUES (1,1,1)
+INSERT INTO tb_expedition_event (expedition_id,event_id,event_order) VALUES (1,2,2)
+INSERT INTO tb_expedition_event (expedition_id,event_id,event_order) VALUES (1,3,3)
+INSERT INTO tb_expedition_event (expedition_id,event_id,event_order) VALUES (1,4,4)
+INSERT INTO tb_expedition_event (expedition_id,event_id,event_order) VALUES (1,5,5)
+INSERT INTO tb_expedition_event (expedition_id,event_id,event_order) VALUES (1,6,6)
+INSERT INTO tb_expedition_event (expedition_id,event_id,event_order) VALUES (1,7,7)
+INSERT INTO tb_expedition_event (expedition_id,event_id,event_order) VALUES (1,8,8)
+INSERT INTO tb_expedition_event (expedition_id,event_id,event_order) VALUES (1,9,9)
 
 --insert hotels
 INSERT INTO tb_hotels (name,meal_plan,apartment_type,category,joker,ok,address,ddi,ddd,telephone,fax,email,website,city,photo1,photo2,photo3,country_id) VALUES ('Xigera Camp',3,1,0,0,1,'Paradise Island | Moremi Wildlife Reserve, Botsuana','+27','21','702 7500','Fax: ','res@redcarnationafrica.com','www.xigera.com','Okavango Delta ','xigera-camp-site-01.jpg','xigera-camp-site-02.jpg','Xigera_6.jpg',30);
@@ -210,6 +210,6 @@ INSERT INTO tb_hotels (name,meal_plan,apartment_type,category,joker,ok,address,d
 INSERT INTO tb_hotels (name,meal_plan,apartment_type,category,joker,ok,address,ddi,ddd,telephone,fax,email,website,city,photo1,photo2,photo3,country_id) VALUES ('Holiday Inn Hotel',1,1,4,0,0,'Av da Marginal','258','21','495050','Fax: 497700','brucec@himaputo.co.mz','ichotelsgroup.com','Maputo','hcom_46301_25_b.jpg','3_19.jpg','32_Quarto_Executivo.jpg',84);
 
 --insert tb_expedition_hotels
-INSERT INTO tb_expedition_hotel (expedition_id,hotel_id) VALUES (1,1);
-INSERT INTO tb_expedition_hotel (expedition_id,hotel_id) VALUES (1,2);
-INSERT INTO tb_expedition_hotel (expedition_id,hotel_id) VALUES (1,3);
+INSERT INTO tb_expedition_hotel (expedition_id,hotel_id,hotel_order) VALUES (1,1,1);
+INSERT INTO tb_expedition_hotel (expedition_id,hotel_id,hotel_order) VALUES (1,2,2);
+INSERT INTO tb_expedition_hotel (expedition_id,hotel_id,hotel_order) VALUES (1,3,3);

@@ -30,6 +30,9 @@ public class Country {
     @OneToMany(mappedBy = "country")
     private Set<Hotels> hotels = new HashSet<>();
 
+    @OneToOne(mappedBy = "country", cascade = CascadeType.ALL)
+    private Baggage baggage;
+
     public Country(Long id, String name, Continent countryContinent, Language language) {
         this.id = id;
         this.name = name;

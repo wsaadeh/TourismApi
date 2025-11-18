@@ -4,7 +4,9 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @NoArgsConstructor
@@ -52,13 +54,22 @@ public class Expedition {
     joinColumns = @JoinColumn(name = "expedition_id"),
     inverseJoinColumns = @JoinColumn(name = "event_id"))
     @OrderColumn(name = "event_order")
-    private Set<Event> events = new HashSet<>();
+    private List<Event> events = new ArrayList<>();
 
     @ManyToMany
     @JoinTable(name = "tb_expedition_hotel",
             joinColumns = @JoinColumn(name = "expedition_id"),
             inverseJoinColumns = @JoinColumn(name = "hotel_id"))
     @OrderColumn(name = "hotel_order")
-    private Set<Hotels> hotels = new HashSet<>();
+    private List<Hotels> hotels = new ArrayList<>();
+
+    @OneToOne(mappedBy = "expedition", cascade = CascadeType.ALL)
+    private Price price;
+
+    @OneToOne(mappedBy = "expedition", cascade = CascadeType.ALL)
+    private Maps maps;
+
+    @OneToOne(mappedBy = "expedition", cascade = CascadeType.ALL)
+    private Photos photos;
 
 }

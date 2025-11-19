@@ -213,3 +213,19 @@ INSERT INTO tb_hotels (name,meal_plan,apartment_type,category,joker,ok,address,d
 INSERT INTO tb_expedition_hotel (expedition_id,hotel_id,hotel_order) VALUES (1,1,1);
 INSERT INTO tb_expedition_hotel (expedition_id,hotel_id,hotel_order) VALUES (1,2,2);
 INSERT INTO tb_expedition_hotel (expedition_id,hotel_id,hotel_order) VALUES (1,3,3);
+
+--insert tb_maps
+INSERT INTO tb_maps (expedition_id,map1,map2) VALUES (1,'Mapa-geral.jpg','okavango map.jpg');
+
+--insert tb_price
+INSERT INTO tb_price (expedition_id,price,us_eu,pessoas,embark,obs1,duration,individual,triplo) VALUES (1,16690.0,0,2,615,'<p>OS VALORES FORAM BASEADOS PARA MAIO/2010 COM SA&Iacute;DA &Agrave;S QUINTAS-FEIRAS. </p><p><u>ADICIONAL PARA VOAR EM CLASSE EXECUTIVA NOS TRECHOS&nbsp;LISBOA/JOHANESBURGO + MAPUTO/LISBOA:&nbsp;</u>USD 2.342 por passageiro</p>',0,0,0);
+
+--insert tb_photos
+INSERT INTO tb_photos (expedition_id,photo1,photo2,photo3,photo4,photo5,photo6,photo7,photo8,photo9,photo10,photo9txt) VALUES (1,'botswana-01.jpg','botswana-02.jpg','botswana-03.jpg','botswana-08_1.jpg','botswana-05_1.jpg','botswana-07_1.jpg','botswana-06_1.jpg','botswana-04_1.jpg','avioneta leve.jpg',null,'Safari logo na chegada.');
+
+--insert tb_baggage
+INSERT INTO tb_baggage (country_id,i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15,i16,i17,i18,i19,i20,i21,i22,i23,i24,i25,i26,i27,i28,i29,i30) VALUES (30,1,1,1,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,1,1,1,1,1,1,1,0,0,1,1,0);
+INSERT INTO tb_baggage (country_id,i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15,i16,i17,i18,i19,i20,i21,i22,i23,i24,i25,i26,i27,i28,i29,i30) VALUES (31,1,1,1,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,1,1,1,1,1,1,1,0,0,1,1,0);
+INSERT INTO tb_baggage (country_id,i1,i2,i3,i4,i5,i6,i7,i8,i9,i10,i11,i12,i13,i14,i15,i16,i17,i18,i19,i20,i21,i22,i23,i24,i25,i26,i27,i28,i29,i30) VALUES (84,1,1,1,1,0,1,0,1,0,0,1,0,1,1,0,1,0,1,1,1,1,1,1,1,1,0,0,1,1,0);
+
+

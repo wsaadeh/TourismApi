@@ -24,7 +24,7 @@ public interface CountryRepository extends JpaRepository<Country, Long> {
             SELECT obj
             FROM Country obj
             JOIN FETCH obj.countryContinent
-            WHERE LOWER(obj.name) like LOWER(CONCAT('%',:countryName,'%'))            
+            WHERE LOWER(obj.name) like LOWER(CONCAT('%',:countryName,'%'))
             """)
     Page<Country> searchByName(String countryName,Pageable pageable);
 
@@ -35,7 +35,7 @@ public interface CountryRepository extends JpaRepository<Country, Long> {
             WHERE LOWER(p.name) like LOWER(CONCAT('%', :countryName, '%'))
             AND (:continent IS NULL OR p.continent_id = :continent)
             """, countQuery = """
-            SELECT COUNT(*) FROM (            
+            SELECT COUNT(*) FROM (
             SELECT p.* FROM tb_country as p
             INNER JOIN tb_continent as c
             ON p.continent_id = c.id

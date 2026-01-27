@@ -20,10 +20,10 @@ import org.springframework.transaction.annotation.Transactional;
 public class CountryService {
 
     @Autowired
-    CountryRepository repository;
+    private CountryRepository repository;
 
     @Autowired
-    ContinentRepository continentRepository;
+    private ContinentRepository continentRepository;
 
     @Transactional(readOnly = true)
     public Page<CountryDto> searchAllPaged(String countryName, Long continentID, Pageable pageable ){

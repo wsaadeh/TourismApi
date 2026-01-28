@@ -24,7 +24,7 @@ public class Hotels {
     private int category;
     private boolean joker;
     private boolean ok;
-    private String Address;
+    private String address;
     private String ddi;
     private String ddd;
     private String telephone;

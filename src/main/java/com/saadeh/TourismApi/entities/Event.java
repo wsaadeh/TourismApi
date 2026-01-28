@@ -26,6 +26,6 @@ public class Event {
     private Country country;
 
     @ManyToMany(mappedBy = "events")
-    Set<Expedition> expeditions = new HashSet<>();
+    private Set<Expedition> expeditions = new HashSet<>();
 
 }

@@ -22,7 +22,7 @@ public class EventDto {
     private boolean joker;
     private boolean ok;
     private Country country;
-    private Set<Expedition> expeditions = new HashSet<>();
+
 
     public EventDto(Event entity) {
         id = entity.getId();
@@ -31,6 +31,6 @@ public class EventDto {
         joker = entity.isJoker();
         ok = entity.isJoker();
         country = entity.getCountry();
-        expeditions = entity.getExpeditions();
+
     }
 }

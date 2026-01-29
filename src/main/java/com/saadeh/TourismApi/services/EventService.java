@@ -9,6 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 @Service
 public class EventService {
 
@@ -19,5 +21,11 @@ public class EventService {
     public Page<EventDto> findAll(Pageable pageable){
         Page<Event> result = repository.findAll(pageable);
         return result.map(EventDto::new);
+    }
+
+    @Transactional(readOnly = true)
+    public EventDto findById(Long id){
+        Event result = repository.findById(id).get();
+        return new EventDto(result);
     }
 }

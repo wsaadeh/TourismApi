@@ -35,7 +35,7 @@ public class HotelsDto {
     private String photo2;
     private String photo3;
     private Country country;
-    private Set<Expedition> expeditions = new HashSet<>();
+
 
     public HotelsDto(Hotels entity){
         id = entity.getId();
@@ -57,6 +57,5 @@ public class HotelsDto {
         photo2 = entity.getPhoto2();
         photo3 = entity.getPhoto3();
         country = entity.getCountry();
-        expeditions = entity.getExpeditions();
     }
 }

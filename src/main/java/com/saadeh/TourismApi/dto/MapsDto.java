@@ -21,7 +21,8 @@ public class MapsDto {
     private String map2Txt;
     private String map3Txt;
     private String map4Txt;
-    private Expedition expedition;
+    private Long expeditionId;
+
 
     public MapsDto(Maps entity){
         id = entity.getId();
@@ -33,6 +34,6 @@ public class MapsDto {
         map2Txt = entity.getMap3Txt();
         map3Txt = entity.getMap3Txt();
         map4Txt = entity.getMap4Txt();
-        expedition = entity.getExpedition();
+        expeditionId = entity.getExpedition().getId();
     }
 }

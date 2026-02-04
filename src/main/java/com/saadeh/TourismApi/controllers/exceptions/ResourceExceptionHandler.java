@@ -3,6 +3,7 @@ package com.saadeh.TourismApi.controllers.exceptions;
 import com.saadeh.TourismApi.services.exceptions.DatabaseException;
 import com.saadeh.TourismApi.services.exceptions.ResourceNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
+import org.hibernate.NonUniqueObjectException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;

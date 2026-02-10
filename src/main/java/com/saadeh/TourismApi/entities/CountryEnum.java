@@ -10,5 +10,6 @@ public enum CountryEnum {
     LANGUAGE,
     BOOKS,
     HOTELS,
-    ALTITUDE;
+    ALTITUDE,
+    GAMES;
 }
